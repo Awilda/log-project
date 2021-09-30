@@ -1,16 +1,20 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-  </div>
+  <main id="app">
+    <Books v-bind:shows="books" />
+  </main>
 </template>
 
 <script>
+import Books from "./components/Books.vue";
 
   export default {
     data() {
       return {
         books: []
       };
+    },
+    components: {
+      Books
     },
     async created() {
      this.books = await this.getBooks();
@@ -24,12 +28,13 @@
               id
             }
             title
+            year
             author
             illustrator
-            publisher {
-              publisher
-              city
-            }
+            link
+            rating
+            sound
+            price
           }
         }
       }`;
@@ -44,17 +49,17 @@
         body: JSON.stringify({ query })
       };
 
-        try {
-          const response = await fetch(fetchUrl, fetchOptions).then(response =>
-            response.json()
-            );
-          return response.data.bookCollection.items;
-        } catch (error) {
-          throw new Error("Could not receive the data from Contentful!");
-        }
+      try {
+        const response = await fetch(fetchUrl, fetchOptions).then(response =>
+          response.json()
+          );
+        return response.data.bookCollection.items;
+      } catch (error) {
+        throw new Error("Could not receive the data from Contentful!");
       }
     }
-  };
+  }
+};
 
 </script>
 
