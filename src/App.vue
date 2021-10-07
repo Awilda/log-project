@@ -1,6 +1,6 @@
 <template>
   <main id="app">
-    <Books v-bind:shows="books" />
+    <Books v-bind:books="books" />
   </main>
 </template>
 
@@ -39,7 +39,7 @@ import Books from "./components/Books.vue";
         }
       }`;
 
-      const fetchUrl = `https://graphql.contentful.com/content/v1/spaces/${process.env.VUE_APP_CONTENTFUL_SPACE_ID}`;
+      const fetchUrl = `https://graphql.contentful.com/content/v1/spaces/${process.env.VUE_APP_CONTENTFUL_SPACE_ID}/environments/main`;
       const fetchOptions = {
         method: "POST",
         headers: {
