@@ -1,10 +1,12 @@
 <template>
   <main id="app">
+    <Hero />
     <Books v-bind:books="books" />
   </main>
 </template>
 
 <script>
+import Hero from "./components/Hero.vue";
 import Books from "./components/Books.vue";
 
   export default {
@@ -14,6 +16,7 @@ import Books from "./components/Books.vue";
       };
     },
     components: {
+      Hero,
       Books
     },
     async created() {
@@ -64,8 +67,10 @@ import Books from "./components/Books.vue";
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,200&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Barlow', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

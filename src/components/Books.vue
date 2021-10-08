@@ -7,7 +7,13 @@
         class="book"
       >
       <div class="book-info">
-        <p class="rating">Rating: {{ book.rating }}</p>
+        <div v-if="book.rating" class="book-rating">
+          <img
+            v-bind:src="require(`../assets/${book.rating}-icon.svg`)"
+            v-bind:alt="`Pia's book rating is ${book.rating}`"
+            />
+        </div>
+
         <p class="sound">Has Sound: {{ book.sound }}</p>
         <div class="book-title">
           <p>{{ book.title }}</p>
@@ -36,3 +42,14 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .book-container {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  .book-info > .book-rating > img {
+    height: 50px;
+  }
+</style>
