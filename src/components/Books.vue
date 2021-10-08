@@ -19,7 +19,10 @@
           <p>{{ book.title }}</p>
         </div>
         <div class="book-image">
-          <p>image here</p>
+          <img
+            v-bind:src="'https://via.placeholder.com/200x280.png?text=Book+Image+Here'"
+            v-bind:alt="`Image of the book: ${book.title}`"
+            />
         </div>
         <div class="book-creators">
           <p>{{ book.author }}</p>
