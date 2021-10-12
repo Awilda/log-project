@@ -14,9 +14,9 @@
             />
         </div>
 
-        <p class="sound">Has Sound: {{ book.sound }}</p>
+        <p class="sound">Has Sound: {{ book.sound ? "Yes" : "No" }}</p>
         <div class="book-title">
-          <p>{{ book.title }}</p>
+          <h3>{{ book.title }}</h3>
         </div>
         <div class="book-image">
           <img
@@ -48,9 +48,12 @@ export default {
 
 <style scoped>
   .book-container {
-    list-style: none;
+    padding-top: 10px;
+    padding-left: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    list-style: none;
   }
   .book-info > .book-rating > img {
     height: 50px;
