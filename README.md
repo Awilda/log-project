@@ -27,3 +27,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 Hero Banner Image: <a href="https://www.vecteezy.com/free-vector/blue-sky-background">Blue Sky Background Vectors by Vecteezy</a>
 
 Placeholder Image: <a href="https://placeholder.com/">Placeholder.com – The Free Image Placeholder Service Favoured By Designers</a>
+
+Emojis: <a href="https://openmoji.org/">OpenMoji - Open source emojis</a>
