@@ -1,6 +1,6 @@
 <template>
   <main id="app">
-    <Hero />
+    <Hero v-bind:books="books" />
     <Books v-bind:books="books" />
   </main>
 </template>
@@ -25,7 +25,7 @@ import Books from "./components/Books.vue";
    methods: {
     getBooks: async () => {
       const query = `{
-        bookCollection {
+        bookCollection(order: title_ASC) {
           items {
             sys {
               id

@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
   .book-container {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
@@ -57,5 +57,9 @@ export default {
   }
   .book-info > .book-rating > img {
     height: 50px;
+  }
+  .book {
+    width: calc(100%/3);
+    padding-top: 10px;
   }
 </style>
