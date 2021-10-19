@@ -59,7 +59,7 @@ export default {
     height: 50px;
   }
   .book {
-    width: calc(100%/3);
+    flex-basis: 33.333333%;
     padding-top: 10px;
   }
 </style>
